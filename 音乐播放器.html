@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>music player</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="main">
+        <div id="control-Panel">
+            <!--封面小图标-->
+            <div id="faceImg"></div>
+            <!--上一曲 播放、暂停  下一曲-->
+            <div id="prev" title="上一曲" class="control-button"></div>
+            <div id="play" title="播放/暂停" class="control-button" data-play=false></div>
+            <div id="next" title="下一曲" class="control-button"></div>
+            <!--进度条-->
+            <div id="progressBar">
+                <div id="progressBar-bg"></div>
+                <div id="progressBar-now"></div>
+            </div>
+            <!--声音-->
+            <div id="volume">
+                <ul id="volume-progressBar">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
+            </div>
+            <div id="mute">静音</div>
+            <div id="model" data-type=0 title="列表循环"></div>
+            <div id="listBtn" title="播放列表"></div>
+        </div>
+        <div id="list"></div>
+    </div>
+    <audio>
+        <source src="songs/葛雨晴%20-%20危险骑士.mp3">
+        <source src="songs/讲真的.mp3">
+    </audio>
+
+</body>
+<script src="jquery-3.2.1.min.js"></script>
+<script src="index.js"></script>
+</html>
