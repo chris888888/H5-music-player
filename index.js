@@ -32,7 +32,7 @@ function audioPlay() {
         audio.play();
     } 
 }
-    
+ //播放键   
 $("#play").click(function () {
     if ($("#play").data('play') === false) {
         audioPlay();
@@ -94,10 +94,15 @@ $('#model').click(function () {
     }
 })
 //播放列表相关
-$("#listBtn").click(function(){
+$("#listBtn").click(function(){ //点击播放列表 展开
     $("#list").toggle(400);
 })
-
+$("#list").on("click","p",function(){ //点击播放列表内的歌曲 播放
+    conf.indexOfsongs=$(this).index();
+    console.log(conf.indexOfsongs)
+    audio.src = source[conf.indexOfsongs].src;
+    audioPlay();
+})
 function loadList(){
     for(let i=0;i<source.length;i++){
         var $p=$("<p></p>");
@@ -108,4 +113,5 @@ function loadList(){
         $("#list").append($p);
     }
 }
+
 loadList()

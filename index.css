@@ -14,7 +14,7 @@ body,ul,li{
     margin: auto;
     width: 1200px;
     height: 680px;
-    background-color: #f0f0f0;
+    background-color: #1a1a1ac5;
     box-shadow: 5px 5px 3px grey;
 
 }
@@ -117,12 +117,21 @@ body,ul,li{
     position: absolute;
     right: 0;
     bottom: 80px;
-    background-color: #1a1a1ac5;
+    background-color: #f0f0f0;
     height: 500px;
     width: 400px;
     display: none;
     overflow: hidden;
 }
 #list p{
-    color:white;
+    color:black;
+    cursor: pointer;
+}
+#function{
+    position: absolute;
+    width: 250px;
+    height: 600px;
+    left:0;
+    top: 0;
+    background-color: #1a1a1ac5;
 }
