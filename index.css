@@ -134,4 +134,31 @@ body,ul,li{
     left:0;
     top: 0;
     background-color: #1a1a1ac5;
+    color:white;
+}
+#function p{
+    padding: 0;
+    margin: 0;
+}
+#add-local-music{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #acacac;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;    
+}
+#box-add-local-music{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    height: 300px;
+    width: 400px;
+    display: none;
+    background-color:  white;
 }

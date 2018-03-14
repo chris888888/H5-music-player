@@ -42,7 +42,6 @@ $("#play").click(function () {
         $('#play').data('play', false);
         audio.pause();
     }
-
 });
 //下一首事件
 $("#next").click(function () {
@@ -60,6 +59,12 @@ function barMove(n) {
     $('#progressBar-now').css('left', n);
     $('#progressBar-bg').css('width', n + 10);
 }
+//进度条拖动改变音乐进度
+$('#progressBar-now').on("mousedown",function(){ 
+    $(document).on("mousemove",function(ev){
+        
+    })
+})
 //声音控制条
 $("#volume-progressBar").on('click', 'li', function () {
     liIndex = $(this).index();
@@ -72,6 +77,8 @@ $("#volume-progressBar").on('click', 'li', function () {
     }
     audio.volume = (liIndex + 1) * 0.2;
 });
+
+//是否静音
 $("#mute").click(function () {
     if (audio.muted === false) {
         audio.muted = true;
@@ -103,6 +110,7 @@ $("#list").on("click","p",function(){ //点击播放列表内的歌曲 播放
     audio.src = source[conf.indexOfsongs].src;
     audioPlay();
 })
+//加载或者刷新播放列表
 function loadList(){
     for(let i=0;i<source.length;i++){
         var $p=$("<p></p>");
@@ -115,3 +123,16 @@ function loadList(){
 }
 
 loadList()
+//个人功能相关
+$("#add-local-music").click(function(){ //显示增加本地音乐弹窗
+    $("#box-add-local-music").toggle(200)
+})
+// 本地音乐弹窗相关
+$("#addMusic-confirm").click(function(){  //确定
+
+    $("#box-add-local-music").hide();
+})
+$("#addMusic-cancel").click(function(){  //取消
+    $("#box-add-local-music").hide();
+})
+

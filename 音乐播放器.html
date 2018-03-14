@@ -9,11 +9,15 @@
     <div id="main">
         <!-- 个人功能部分 -->
         <div id="function">
+            <div id="local-music">
+                <p>本地音乐 <span id="add-local-music">+</span> </p>          
+            </div>
             <div>
                 <p> 创建歌单 <span>+</span></p>
                 <p></p>
             </div>
         </div>
+        <!-- 控制面板 -->
         <div id="control-Panel">
             <!--封面小图标-->
             <div id="faceImg"></div>
@@ -42,6 +46,15 @@
         </div>
         <!-- 播放列表 -->
         <div id="list"></div>
+        <!-- 弹窗部分 -->
+        <div id="box-add-local-music">
+            <p><input type="file" id="localFileUrl"></p>
+            <p>
+                <input type="button" value="确定" id="addMusic-confirm"> 
+                <input type="button" value="取消" id="addMusic-cancel">
+            </p>
+            
+        </div>
     </div>
     <audio>
         <source src="songs/葛雨晴%20-%20危险骑士.mp3">
